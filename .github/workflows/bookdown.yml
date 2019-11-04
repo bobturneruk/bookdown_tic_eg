@@ -1,0 +1,11 @@
+name: Render and Display Bookdown
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest    
+    container: rocker/verse
+    steps:
+      - name: Build Bookdown
+        run: Rscript -e "bookdown::render_book('index.Rmd', output_dir = 'public')"
