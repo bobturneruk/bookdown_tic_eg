@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest    
     container: rocker/verse
     steps:
+      - uses: actions/checkout@v1
       - name: Build Bookdown
-        run: echo "$(ls)"
-        #run: Rscript -e "bookdown::render_book('index.Rmd', output_dir = 'public')"
+        run: Rscript -e "bookdown::render_book('index.Rmd', output_dir = 'public')"
