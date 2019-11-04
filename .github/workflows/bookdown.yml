@@ -8,5 +8,5 @@ jobs:
     container: rocker/verse
     steps:
       - name: Build Bookdown
-        run: ls
+        run: echo "$(ls)"
         #run: Rscript -e "bookdown::render_book('index.Rmd', output_dir = 'public')"
